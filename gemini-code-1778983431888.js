@@ -28,6 +28,6 @@ io.on('connection', (socket) => {
 
 // Use da port Render gives us, or default to port 3000
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log('Da server is running on port ' + PORT);
 });
