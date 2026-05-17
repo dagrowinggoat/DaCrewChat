@@ -28,6 +28,8 @@ io.on('connection', (socket) => {
 
 // Use da port Render gives us, or default to port 3000
 const PORT = process.env.PORT || 3000;
+
+// NEW FIX: '0.0.0.0' forces da engine to bind to Render's network properly so it doesn't crash
 server.listen(PORT, '0.0.0.0', () => {
   console.log('Da server is running on port ' + PORT);
 });
